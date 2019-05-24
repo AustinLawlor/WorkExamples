@@ -1,0 +1,59 @@
+
+import java.lang.*;
+import java.util.*;
+
+/**
+ *
+ * @author S0556309
+ */
+public class Assignment1ROI {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //Variable Declaration
+        float initCap, profitMargin, operExp, varExp, totalExp, grossProfit, netProfit;
+        int noOfYears, noOfBiz;
+        String[] userMesPrompts; //input array to enter the project specifications
+        String[] userBusinessPrompts; // array for determining individual business information
+        Scanner in = new Scanner(System.in);
+
+        userMesPrompts = new String [3];
+        userMesPrompts[0] = ("Enter the number of years for the financial analysis?");
+        userMesPrompts[1] = ("Enter the initial investment capital");
+        userMesPrompts[2] = ("How many businesses do you wish to analyze?(No more than 10)");
+        //input for entering the num of years
+        System.out.println(userMesPrompts[0]);
+        noOfYears = in.nextInt();
+        //input for the initial cap
+        System.out.println(userMesPrompts[1]);
+        initCap = in.nextFloat();
+        //input for the # of businesses
+        System.out.println(userMesPrompts[2]);
+        noOfBiz = in.nextInt();
+        
+        for (int i = 0; noOfBiz >= i; i++) {
+            //input for each business
+            userBusinessPrompts = new String[3];
+            userBusinessPrompts[0] = ("Please enter the expect profit margin for business " + i + ".");
+            userBusinessPrompts[1] = ("Please enter the fixed operating expenses for business " + i + ".");
+            userBusinessPrompts[2] = ("Please enter variable expenses for business " + i + ".");
+            //input for profit margin
+            System.out.println(userBusinessPrompts[0]);
+            profitMargin = in.nextFloat(); // Initializing Profit Margin Variable
+            //Input for fixed operating expense
+            System.out.println(userBusinessPrompts[1]);
+            operExp = in.nextFloat();
+            //Input for the variable expenses
+            System.out.println(userBusinessPrompts[2]);
+            varExp = in.nextFloat();
+
+            //code to calculate gross and net profit and ending balance
+            //totalExp = varExp + operExp;
+
+        }
+    }
+}
+
+
